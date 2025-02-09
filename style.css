@@ -1,0 +1,123 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Initial blue gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease; /* Smooth background transition */
+    color: white;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .input-group {
+    margin-bottom: 30px;
+  }
+  
+  .input-field {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    transition: border-color 0.3s;
+  }
+  
+  .input-field:focus {
+    border-color: #4CAF50;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Slightly enlarge the button */
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .weather-info {
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .weather-info p {
+    font-size: 18px;
+    margin-top: 10px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Text fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Slide-in effect for weather info */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Background color transitions based on weather */
+  .sunny {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Sunny gradient */
+  }
+  
+  .cloudy {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Cloudy gradient */
+  }
+  
+  .rainy {
+    background: linear-gradient(to right, #4b6cb7, #182848); /* Rainy gradient */
+  }
+  
+  .clear {
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Default/clear sky gradient */
+  }
+  
